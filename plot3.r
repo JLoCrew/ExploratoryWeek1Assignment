@@ -33,6 +33,7 @@ legend("topright", cex=0.50, pch=1, col=c("black", "red", "blue"), legend = c("S
 dev.copy(png, 'plot3.png', width=480, height=480)
 dev.off()
 
+#I tried using ggplot2 first but couldn't figure out the legend
 #png("plot3.png", width=480, height=480)
 #library(ggplot2)
 #p1 <-ggplot(new_df, aes(x=new_df$newdatetime))+
