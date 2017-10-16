@@ -24,8 +24,8 @@ new_df$newdatetime <- with(new_df, as.POSIXct(paste(Date,Time), format="%d/%m/%Y
 
 # Step 2 - let's use mfrow and mfcol functions to stack the graphs into one
 par(mfrow=c(2,2))#we want two rows, two columns
-hist(new_df$Global_active_power, xlab="Global Active Power (kilowatts)", main="Global Active Power", col="red")
 plot(new_df$newdatetime, new_df$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+plot(new_df$newdatetime, new_df$Voltage, type = "l", ylab = "Voltage", xlab = "datetime")
 plot(x=new_df$newdatetime, y=new_df$Sub_metering_1, type="l", col="black", xlab="", ylab = "Energy sub metering")
 lines(x=new_df$newdatetime, y=new_df$Sub_metering_2, type = "l", col="red")
 lines(x=new_df$newdatetime, y=new_df$Sub_metering_3, type="l", col="blue")
